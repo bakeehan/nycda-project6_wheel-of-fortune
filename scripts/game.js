@@ -20,7 +20,7 @@ function stageGame (word, index) {
 	bankDisplay.innerHTML = bank;
 	wrongDisplay.innerHTML = wrong;
 	// shows alphabet BANKS in window
-	current = word.array;
+	current = word;
 	// updates CURRENT array for testing
 	console.log(word.word);
 	// for testing and/or cheating
@@ -29,7 +29,7 @@ function stageGame (word, index) {
 
 function checkWin () {
 	if (progress.includes("_") == false) {
-		// console.log("yay!");
+		gameScore += current.value;
 		playGame(Math.floor(Math.random()*words.length));
 		// starts new GAME
 		// NOTE TO SELF THIS WILL BE BE TIED TO A CLICK NOT AUTOMATIC
@@ -37,9 +37,9 @@ function checkWin () {
 }
 
 function testKey (letter) {
-	if (current.includes(letter)) {
-		for (i=0; i<current.length;i++) {
-			if (current[i] == letter) {
+	if (current.array.includes(letter)) {
+		for (i=0; i<current.array.length;i++) {
+			if (current.array[i] == letter) {
 				progress[i] = letter;
 			}
 		}
