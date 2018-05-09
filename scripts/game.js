@@ -14,7 +14,7 @@ function stageGame (word, index) {
 	for (i=0;i<progress.length;i++) {
 		progressDisplay.innerHTML += progress[i];
 	}
-	// shows PROGRESS in window
+	// updates+shows PROGRESS in window
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window
 	current = word.array;
@@ -24,10 +24,19 @@ function stageGame (word, index) {
 }
 
 
-function testKey (letter, word) {
-	if (word.includes(letter)) {
-		for (i=0; i<word.length;i++) {
-			if (word[i] == letter) {
+function checkWin () {
+	if (progress.includes("_") == false) {
+		// console.log("yay!");
+		playGame(Math.floor(Math.random()*words.length));
+		// starts new GAME
+		// NOTE TO SELF THIS WILL BE BE TIED TO A CLICK NOT AUTOMATIC
+	}
+}
+
+function testKey (letter) {
+	if (current.includes(letter)) {
+		for (i=0; i<current.length;i++) {
+			if (current[i] == letter) {
 				progress[i] = letter;
 			}
 		}
@@ -37,6 +46,7 @@ function testKey (letter, word) {
 			progressDisplay.innerHTML += progress[i];
 		}
 		// updates PROGRESS in window
+		checkWin();
 	} else {
 		gameScore -= 1;
 		scoreDisplay.innerHTML = gameScore;
@@ -49,6 +59,8 @@ function testKey (letter, word) {
 
 
 function playGame (index) {
+	progress = [];
+	progressDisplay.innerHTML = "";
 	stageGame(words[index], index);
 }
 
