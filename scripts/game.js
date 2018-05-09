@@ -15,6 +15,7 @@ function stageGame (word, index) {
 		progressDisplay.innerHTML += progress[i];
 	}
 	// updates+shows PROGRESS in window
+	hintDisplay.innerHTML = word.hint;
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window
 	bankDisplay.innerHTML = bank;
