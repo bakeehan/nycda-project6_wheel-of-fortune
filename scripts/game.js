@@ -83,3 +83,7 @@ function playGame (index) {
 }
 
 playGame(Math.floor(Math.random()*words.length));
+
+window.addEventListener("keydown", function(event) {
+	testKey(event.key);
+});
