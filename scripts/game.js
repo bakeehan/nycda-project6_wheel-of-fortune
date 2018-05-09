@@ -17,6 +17,9 @@ function stageGame (word, index) {
 	// updates+shows PROGRESS in window
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window
+	bankDisplay.innerHTML = bank;
+	wrongDisplay.innerHTML = wrong;
+	// shows alphabet BANKS in window
 	current = word.array;
 	// updates CURRENT array for testing
 	console.log(word.word);
@@ -46,6 +49,9 @@ function testKey (letter) {
 			progressDisplay.innerHTML += progress[i];
 		}
 		// updates PROGRESS in window
+		bank.splice(bank.indexOf(letter), 1)
+		bankDisplay.innerHTML = bank;
+		// updates and shows BANK array
 		checkWin();
 	} else {
 		gameScore -= 1;
@@ -54,6 +60,9 @@ function testKey (letter) {
 		wrong.push(letter);
 		wrongDisplay.innerHTML = wrong;
 		// updates and shows WRONG array
+		bank.splice(bank.indexOf(letter), 1)
+		bankDisplay.innerHTML = bank;
+		// updates and shows BANK array
 	}
 }
 
@@ -61,6 +70,8 @@ function testKey (letter) {
 function playGame (index) {
 	progress = [];
 	progressDisplay.innerHTML = "";
+	bank = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	wrong = [];
 	stageGame(words[index], index);
 }
 
