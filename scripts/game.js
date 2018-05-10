@@ -4,6 +4,17 @@ var current = [];
 var bank = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wrong = [];
 
+function fillBanks () {
+	bankDisplay.innerHTML = "";
+	for (i=0;i<bank.length;i++) {
+		bankDisplay.innerHTML += bank[i];
+	}
+	wrongDisplay.innerHTML = "";
+	for (i=0;i<wrong.length;i++) {
+		wrongDisplay.innerHTML += wrong[i];
+	}
+}
+
 
 function stageGame (word, index) {
 	for (i=0;i<word.array.length;i++) {
@@ -19,8 +30,7 @@ function stageGame (word, index) {
 	valueDisplay.innerHTML =  "worth " + word.value + " points"
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window
-	bankDisplay.innerHTML = bank;
-	wrongDisplay.innerHTML = wrong;
+	fillBanks();
 	// shows alphabet BANKS in window
 	current = word;
 	// updates CURRENT array for testing
@@ -52,7 +62,7 @@ function testKey (letter) {
 		}
 		// updates PROGRESS in window
 		bank.splice(bank.indexOf(letter), 1)
-		bankDisplay.innerHTML = bank;
+		fillBanks();
 		// updates and shows BANK array
 		checkWin();
 	} else {
@@ -60,10 +70,8 @@ function testKey (letter) {
 		scoreDisplay.innerHTML = gameScore;
 		// updates GAMESCORE
 		wrong.push(letter);
-		wrongDisplay.innerHTML = wrong;
-		// updates and shows WRONG array
 		bank.splice(bank.indexOf(letter), 1)
-		bankDisplay.innerHTML = bank;
+		fillBanks();
 		// updates and shows BANK array
 	}
 }
