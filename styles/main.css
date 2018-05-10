@@ -1,0 +1,40 @@
+#gameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'name name name name' 'info info display display' 'info info hint hint' 'score score hint hint' 'bank bank wrong wrong' 'buttons buttons buttons buttons';
+  width: 90%;
+  margin: 50px auto; }
+
+#progress {
+  grid-area: display;
+  background-color: red; }
+
+#hint {
+  grid-area: hint;
+  background-color: orange; }
+
+#score {
+  grid-area: score;
+  background-color: green; }
+
+#bank {
+  grid-area: bank;
+  background-color: blue; }
+
+#wrong {
+  grid-area: wrong;
+  background-color: cyan; }
+
+.buttonholder {
+  grid-area: buttons;
+  background-color: pink; }
+
+.instructions {
+  grid-area: info;
+  background-color: goldenrod; }
+
+.title {
+  grid-area: name;
+  background-color: silver; }
+
+/*# sourceMappingURL=main.css.map */
