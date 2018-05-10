@@ -4,6 +4,8 @@ var scoreDisplay = document.getElementById("score");
 
 var hintDisplay = document.getElementById("hint");
 
+var valueDisplay = document.getElementById("value");
+
 var bankDisplay = document.getElementById("bank");
 var wrongDisplay = document.getElementById("wrong");
 

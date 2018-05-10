@@ -1,0 +1,17 @@
+h1, h2, h3 {
+	font-weight: normal;
+	margin:0;
+}
+
+h1, h2 {
+	font-family: $titles;
+}
+
+h3 {
+	font-family: $serif-h;
+}
+
+a {
+	text-decoration: none;
+	color: $rose;
+}

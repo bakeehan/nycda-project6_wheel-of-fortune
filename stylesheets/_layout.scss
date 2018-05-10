@@ -3,26 +3,26 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-areas:
 	'name name name name'
-	'info info display display'
-	'info info hint hint'
-	'score score hint hint'
+	'info display display display'
+	'info this this score'
+	'info buttons buttons buttons'
 	'bank bank wrong wrong'
-	'buttons buttons buttons buttons';
-	width:90%;
-	margin:50px auto;
+	'credit credit credit credit';
 }
 
-#progress {grid-area: display;background-color:red;}
+#progress {grid-area: display;}
 
-#hint {grid-area: hint;background-color:orange;}
+.round {grid-area: this;}
 
-#score {grid-area: score;background-color:green;}
+.score {grid-area: score;}
 
-#bank {grid-area: bank;background-color:blue;}
-#wrong {grid-area: wrong;background-color:cyan;}
+#bank {grid-area: bank;}
+#wrong {grid-area: wrong;}
 
-.buttonholder {grid-area: buttons;background-color:pink;}
+.buttonholder {grid-area: buttons;}
 
-.instructions {grid-area: info;background-color:goldenrod;}
+.instructions {grid-area: info;}
 
-.title {grid-area: name;background-color:silver;}
+.title {grid-area: name;}
+
+.cred {grid-area:credit;}

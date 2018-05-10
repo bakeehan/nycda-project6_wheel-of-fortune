@@ -1,40 +1,82 @@
+body {
+  background-image: url("../images/background-triangles-abstract.jpg");
+  background-size: 600px;
+  font-family: "Poppins", sans-serif; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  margin: 0; }
+
+h1, h2 {
+  font-family: "Lobster", cursive; }
+
+h3 {
+  font-family: "Patua One", monospace; }
+
+a {
+  text-decoration: none;
+  color: #9B5C73; }
+
 #gameContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'name name name name' 'info info display display' 'info info hint hint' 'score score hint hint' 'bank bank wrong wrong' 'buttons buttons buttons buttons';
-  width: 90%;
-  margin: 50px auto; }
+  grid-template-areas: 'name name name name' 'info display display display' 'info this this score' 'info buttons buttons buttons' 'bank bank wrong wrong' 'credit credit credit credit'; }
 
 #progress {
-  grid-area: display;
-  background-color: red; }
+  grid-area: display; }
 
-#hint {
-  grid-area: hint;
-  background-color: orange; }
+.round {
+  grid-area: this; }
 
-#score {
-  grid-area: score;
-  background-color: green; }
+.score {
+  grid-area: score; }
 
 #bank {
-  grid-area: bank;
-  background-color: blue; }
+  grid-area: bank; }
 
 #wrong {
-  grid-area: wrong;
-  background-color: cyan; }
+  grid-area: wrong; }
 
 .buttonholder {
-  grid-area: buttons;
-  background-color: pink; }
+  grid-area: buttons; }
 
 .instructions {
-  grid-area: info;
-  background-color: goldenrod; }
+  grid-area: info; }
 
 .title {
-  grid-area: name;
-  background-color: silver; }
+  grid-area: name; }
+
+.cred {
+  grid-area: credit; }
+
+#gameContainer {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #70AE92;
+  border-radius: 25px;
+  padding: 15px;
+  border: 10px double white; }
+
+#progress {
+  text-align: center;
+  padding: 20px 10px;
+  letter-spacing: 5px;
+  font-size: 2em;
+  font-family: "Patua One", monospace; }
+
+.round {
+  text-align: center; }
+
+.value {
+  font-style: italic; }
+
+.cred {
+  border-top: 2px solid white;
+  margin: 5px -15px -10px;
+  font-size: .75em;
+  font-style: oblique;
+  text-align: right;
+  padding: 3px 10px 0 0;
+  color: #A0D3C3; }
 
 /*# sourceMappingURL=main.css.map */

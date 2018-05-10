@@ -1,3 +1,16 @@
 @import "variables";
 
+body {
+	background-image:url("../images/background-triangles-abstract.jpg");
+	background-size:600px;
+	font-family: $main-text;
+}
+
+@import "texts";
+
 @import "layout";
+@import "bigshapes";
+
+@import "leftcolumn";
+@import "rightcolumn";
+@import "bottom";
