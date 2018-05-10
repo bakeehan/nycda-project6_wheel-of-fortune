@@ -4,19 +4,38 @@
 	letter-spacing: 5px;
 	font-size:2em;
 	font-family: $serif-h;
+	text-transform: uppercase;
 }
 
 .round {
 	text-align:center;
 }
 
-#hint {}
-
-.value {
-	font-style:italic;
+#counter {
+	font-size: .8em;
 }
 
-.score {}
+#value {
+	letter-spacing:1px;
+}
+
+#value b {
+	color: $rose;
+	font-family: $serif-h;
+	font-weight:normal;
+	font-size:1.2em;
+}
+
+#hint {
+	margin-top:15px;
+	font-style:italic;
+	color: $off-main;
+}
+
+#hint b {
+	font-style: normal;
+	color: $main;
+}
 
 #score {
 	color:$rose;

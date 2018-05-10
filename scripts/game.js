@@ -5,7 +5,7 @@ var bank = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n"
 var wrong = [];
 var total = words.length;
 var rounds = 0;
-var pointer = " point";
+var pointer = "point";
 
 function fillBanks () {
 	bankDisplay.innerHTML = "";
@@ -34,7 +34,7 @@ function stageGame (word, index) {
 	roundDisplay.innerHTML = "word " + rounds + " of " + total;
 	if (word.value > 1) {pointer += "s";}
 	// checks whether "points" should be plural
-	valueDisplay.innerHTML =  "worth " + word.value + pointer;
+	valueDisplay.innerHTML =  "worth <b>" + word.value + "</b> " + pointer;
 	// ^^^ show HINT, ROUND, and POINT VALUE in window
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window

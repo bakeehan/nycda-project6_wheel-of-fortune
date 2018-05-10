@@ -99,13 +99,32 @@ a {
   padding: 20px 10px;
   letter-spacing: 5px;
   font-size: 2em;
-  font-family: "Patua One", monospace; }
+  font-family: "Patua One", monospace;
+  text-transform: uppercase; }
 
 .round {
   text-align: center; }
 
-.value {
-  font-style: italic; }
+#counter {
+  font-size: .8em; }
+
+#value {
+  letter-spacing: 1px; }
+
+#value b {
+  color: #9B5C73;
+  font-family: "Patua One", monospace;
+  font-weight: normal;
+  font-size: 1.2em; }
+
+#hint {
+  margin-top: 15px;
+  font-style: italic;
+  color: #486159; }
+
+#hint b {
+  font-style: normal;
+  color: black; }
 
 #score {
   color: #9B5C73;
@@ -121,7 +140,8 @@ a {
   text-align: center; }
 
 .alphabet {
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  color: #486159; }
 
 #bank {
   margin-right: 15px; }
