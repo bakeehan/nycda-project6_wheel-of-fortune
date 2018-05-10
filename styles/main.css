@@ -40,7 +40,7 @@ a {
 #gameContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'name name name name' 'info display display display' 'info this this score' 'info buttons buttons buttons' 'bankL bankL wrongL wrongL' 'bank bank wrong wrong' 'credit credit credit credit'; }
+  grid-template-areas: 'name name tag tag' 'info display display display' 'info this this score' 'info buttons buttons buttons' 'bankL bankL wrongL wrongL' 'bank bank wrong wrong' 'credit credit credit credit'; }
 
 #progress {
   grid-area: display; }
@@ -75,6 +75,9 @@ a {
 .wrong-head {
   grid-area: wrongL; }
 
+.slogan {
+  grid-area: tag; }
+
 #gameContainer {
   width: 80%;
   min-width: 500px;
@@ -88,6 +91,9 @@ a {
 .instructions {
   color: white; }
 
+.instructions p {
+  margin: 10px 0; }
+
 #progress {
   text-align: center;
   padding: 20px 10px;
@@ -100,6 +106,28 @@ a {
 
 .value {
   font-style: italic; }
+
+#score {
+  color: #9B5C73;
+  font-family: "Lobster", cursive;
+  font-size: 2.5em;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 90%;
+  margin: 5px auto 0; }
+
+.heads {
+  text-align: center; }
+
+.alphabet {
+  letter-spacing: 2px; }
+
+#bank {
+  margin-right: 15px; }
+
+#wrong {
+  margin-left: 15px; }
 
 .cred {
   border-top: 2px solid white;
@@ -121,7 +149,14 @@ h4 {
   left: 60px; }
 
 .instructions, #progress {
-  margin-top: 95px; }
+  margin-top: 35px; }
+
+.slogan {
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  padding: 20px 15px 0 0;
+  text-align: right; }
 
 .buttonholder {
   text-align: center; }

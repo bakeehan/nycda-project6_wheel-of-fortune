@@ -18,6 +18,15 @@
 
 .score {}
 
-#score {}
+#score {
+	color:$rose;
+	font-family: $titles;
+	font-size:2.5em;
+	text-align: center;
+	border: 1px solid $light;
+	border-radius: $small-round;
+	width: 90%;
+	margin: 5px auto 0;
+}
 
 .buttonholder {}

@@ -1,3 +1,19 @@
+.heads {
+	text-align:center;
+}
+
+.alphabet {
+	letter-spacing:2px;
+}
+
+#bank {
+	margin-right:$banks-padding;
+}
+
+#wrong {
+	margin-left: $banks-padding;
+}
+
 .cred {
 	border-top: 2px solid $light;
 	margin: 5px -15px;

@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-areas:
-	'name name name name'
+	'name name tag tag'
 	'info display display display'
 	'info this this score'
 	'info buttons buttons buttons'
@@ -30,3 +30,5 @@
 
 .bank-head {grid-area:bankL;}
 .wrong-head {grid-area:wrongL;}
+
+.slogan {grid-area:tag;}
