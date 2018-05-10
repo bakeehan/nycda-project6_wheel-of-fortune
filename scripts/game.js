@@ -3,6 +3,9 @@ var progress = [];
 var current = [];
 var bank = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wrong = [];
+var total = words.length;
+var rounds = 0;
+var pointer = " point";
 
 function fillBanks () {
 	bankDisplay.innerHTML = "";
@@ -17,6 +20,7 @@ function fillBanks () {
 
 
 function stageGame (word, index) {
+	rounds += 1;
 	for (i=0;i<word.array.length;i++) {
 		progress.push("_");
 	} // stages PROGRESS array
@@ -27,7 +31,11 @@ function stageGame (word, index) {
 	}
 	// updates+shows PROGRESS in window
 	hintDisplay.innerHTML = "<b>hint:</b> " + word.hint;
-	valueDisplay.innerHTML =  "worth " + word.value + " points"
+	roundDisplay.innerHTML = "word " + rounds + " of " + total;
+	if (word.value > 1) {pointer += "s";}
+	// checks whether "points" should be plural
+	valueDisplay.innerHTML =  "worth " + word.value + pointer;
+	// ^^^ show HINT, ROUND, and POINT VALUE in window
 	scoreDisplay.innerHTML = gameScore;
 	// shows initial SCORE in window
 	fillBanks();
