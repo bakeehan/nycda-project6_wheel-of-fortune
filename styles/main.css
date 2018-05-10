@@ -3,18 +3,35 @@ body {
   background-size: 600px;
   font-family: "Poppins", sans-serif; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-weight: normal;
   margin: 0; }
 
-h1, h2 {
+h1, h2, h4 {
   font-family: "Lobster", cursive; }
 
 h1 {
-  color: white; }
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 3.9em;
+  letter-spacing: 4px;
+  margin: -10px 0 5px; }
+
+h1:first-letter {
+  font-size: 1.4em; }
+
+h1, h4 {
+  display: inline-block; }
 
 h3 {
   font-family: "Patua One", monospace; }
+
+h4 {
+  font-size: 1.4em;
+  letter-spacing: 2px; }
+
+h1, h4 {
+  color: #9B5C73; }
 
 a {
   text-decoration: none;
@@ -65,8 +82,11 @@ a {
   margin: 50px auto;
   background-color: #70AE92;
   border-radius: 25px;
-  padding: 15px;
+  padding: 0 15px;
   border: 10px double white; }
+
+.instructions {
+  color: white; }
 
 #progress {
   text-align: center;
@@ -83,12 +103,25 @@ a {
 
 .cred {
   border-top: 2px solid white;
-  margin: 5px -15px -10px;
+  margin: 5px -15px;
   font-size: .75em;
   font-style: oblique;
   text-align: right;
   padding: 3px 10px 0 0;
   color: #A0D3C3; }
+
+.title {
+  position: absolute;
+  width: 90%;
+  padding: 2px 10px; }
+
+h4 {
+  position: absolute;
+  top: 2px;
+  left: 60px; }
+
+.instructions, #progress {
+  margin-top: 95px; }
 
 .buttonholder {
   text-align: center; }
