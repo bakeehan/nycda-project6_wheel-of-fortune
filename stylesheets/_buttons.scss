@@ -1,0 +1,13 @@
+.buttonholder {
+	text-align: center;
+}
+
+button {
+	width:75px;
+	margin:15px;
+	border-radius: 5px;
+	background-color: $sky;
+	border: 2px solid $rose;
+	color: $rose;
+	font-weight: lighter;
+}

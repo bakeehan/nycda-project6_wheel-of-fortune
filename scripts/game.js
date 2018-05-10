@@ -7,11 +7,11 @@ var wrong = [];
 function fillBanks () {
 	bankDisplay.innerHTML = "";
 	for (i=0;i<bank.length;i++) {
-		bankDisplay.innerHTML += bank[i];
+		bankDisplay.innerHTML += bank[i] + " ";
 	}
 	wrongDisplay.innerHTML = "";
 	for (i=0;i<wrong.length;i++) {
-		wrongDisplay.innerHTML += wrong[i];
+		wrongDisplay.innerHTML += wrong[i] + " ";
 	}
 }
 

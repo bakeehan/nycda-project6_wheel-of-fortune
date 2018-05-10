@@ -10,6 +10,9 @@ h1, h2, h3 {
 h1, h2 {
   font-family: "Lobster", cursive; }
 
+h1 {
+  color: white; }
+
 h3 {
   font-family: "Patua One", monospace; }
 
@@ -20,7 +23,7 @@ a {
 #gameContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'name name name name' 'info display display display' 'info this this score' 'info buttons buttons buttons' 'bank bank wrong wrong' 'credit credit credit credit'; }
+  grid-template-areas: 'name name name name' 'info display display display' 'info this this score' 'info buttons buttons buttons' 'bankL bankL wrongL wrongL' 'bank bank wrong wrong' 'credit credit credit credit'; }
 
 #progress {
   grid-area: display; }
@@ -49,8 +52,16 @@ a {
 .cred {
   grid-area: credit; }
 
+.bank-head {
+  grid-area: bankL; }
+
+.wrong-head {
+  grid-area: wrongL; }
+
 #gameContainer {
   width: 80%;
+  min-width: 500px;
+  max-width: 725px;
   margin: 50px auto;
   background-color: #70AE92;
   border-radius: 25px;
@@ -78,5 +89,17 @@ a {
   text-align: right;
   padding: 3px 10px 0 0;
   color: #A0D3C3; }
+
+.buttonholder {
+  text-align: center; }
+
+button {
+  width: 75px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #A0D3C3;
+  border: 2px solid #9B5C73;
+  color: #9B5C73;
+  font-weight: lighter; }
 
 /*# sourceMappingURL=main.css.map */

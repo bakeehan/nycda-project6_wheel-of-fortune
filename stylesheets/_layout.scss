@@ -6,6 +6,7 @@
 	'info display display display'
 	'info this this score'
 	'info buttons buttons buttons'
+	'bankL bankL wrongL wrongL'
 	'bank bank wrong wrong'
 	'credit credit credit credit';
 }
@@ -26,3 +27,6 @@
 .title {grid-area: name;}
 
 .cred {grid-area:credit;}
+
+.bank-head {grid-area:bankL;}
+.wrong-head {grid-area:wrongL;}
