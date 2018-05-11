@@ -4,8 +4,13 @@ var current = [];
 var bank = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wrong = [];
 var total = words.length;
+var possible = 0;
 var rounds = 0;
 var pointer = "point";
+
+for (i=0;i<words.length;i++) {
+	possible += words[i].value;
+}
 
 function fillBanks () {
 	bankDisplay.innerHTML = "";
@@ -62,13 +67,14 @@ function endCondition(score) {
 	var end = document.createElement("div");
 	end.id="end";
 	var over = document.createElement("button");
-	over.innerHTML="Play again?";
+	over.innerHTML = "Play again?";
 	gameDisplay.appendChild(end);
 	if (score < 5) {
 		end.innerHTML = "<h1>You lose!</h1>";
 	} else {
 		end.innerHTML = "<h1>You win!</h1>";
 	}
+	end.innerHTML += "<h3><b>" + score + "</b> out of <b>" + possible + "</b> points.</h3>";
 	end.appendChild(over);
 	over.addEventListener("click", function(){location.reload();});
 }

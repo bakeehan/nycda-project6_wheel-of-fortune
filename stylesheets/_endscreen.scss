@@ -7,5 +7,14 @@
 #end button {
 	width:200px;
 	display:block;
-	margin: 0 auto 25px;
+	margin: 15px  auto 25px;
+	padding: 5px;
+}
+
+#end h1 {
+	display:block;
+}
+
+#end b {
+	color:$off-main;
 }
