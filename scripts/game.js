@@ -56,6 +56,24 @@ function checkWin () {
 	}
 }
 
+function endCondition(score) {
+	gameDisplay.innerHTML = "";
+	var end = document.createElement("div");
+	end.id="end";
+	var over = document.createElement("button");
+	over.innerHTML="Play again?";
+	over.id = "reload";
+	gameDisplay.appendChild(end);
+	gameDisplay.appendChild(over);
+	over.addEventListener("click", function(){location.reload();});
+	if (score < 5) {
+		end.innerHTML = "You lose!";
+	} else {
+		end.innerHTML = "You win!";
+	}
+}
+
+
 function testKey (letter) {
 	if (current.array.includes(letter)) {
 		for (i=0; i<current.array.length;i++) {
@@ -95,10 +113,8 @@ function playGame (index) {
 		wrong = [];
 		// clears stored TEMP INFO
 		stageGame(words[index], index);
-	} else if (gameScore > 5) {
-		gameDisplay.innerHTML = gameScore + " points! You win!";
 	} else {
-		gameDisplay.innerHTML = "Only " + gameScore + " points? :(";
+		endCondition(gameScore);
 	}
 }
 
