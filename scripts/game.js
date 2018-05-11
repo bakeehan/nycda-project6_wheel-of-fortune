@@ -69,8 +69,10 @@ function testKey (letter) {
 			progressDisplay.innerHTML += progress[i];
 		}
 		// updates PROGRESS in window
-		bank.splice(bank.indexOf(letter), 1)
-		fillBanks();
+		if (bank.indexOf(letter) != -1) {
+			bank.splice(bank.indexOf(letter), 1)
+			fillBanks();
+		}
 		// updates and shows BANK array
 		checkWin();
 	} else {
