@@ -58,19 +58,19 @@ function checkWin () {
 
 function endCondition(score) {
 	gameDisplay.innerHTML = "";
+	gameContainer.style.display = "block";
 	var end = document.createElement("div");
 	end.id="end";
 	var over = document.createElement("button");
 	over.innerHTML="Play again?";
-	over.id = "reload";
 	gameDisplay.appendChild(end);
-	gameDisplay.appendChild(over);
-	over.addEventListener("click", function(){location.reload();});
 	if (score < 5) {
-		end.innerHTML = "You lose!";
+		end.innerHTML = "<h1>You lose!</h1>";
 	} else {
-		end.innerHTML = "You win!";
+		end.innerHTML = "<h1>You win!</h1>";
 	}
+	end.appendChild(over);
+	over.addEventListener("click", function(){location.reload();});
 }
 
 

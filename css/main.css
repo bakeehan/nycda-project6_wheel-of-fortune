@@ -88,6 +88,16 @@ a {
   padding: 0 15px;
   border: 10px double white; }
 
+#end {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px; }
+
+#end button {
+  width: 200px;
+  display: block;
+  margin: 0 auto 25px; }
+
 .instructions {
   color: white; }
 
@@ -182,12 +192,15 @@ h4 {
   text-align: center; }
 
 button {
-  width: 75px;
+  width: 200px;
   margin: 15px;
   border-radius: 5px;
   background-color: #A0D3C3;
   border: 2px solid #9B5C73;
   color: #9B5C73;
   font-weight: lighter; }
+
+.levels {
+  width: 75px; }
 
 /*# sourceMappingURL=main.css.map */

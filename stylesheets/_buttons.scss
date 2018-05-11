@@ -3,11 +3,15 @@
 }
 
 button {
-	width:75px;
+	width:200px;
 	margin:15px;
 	border-radius: $small-round;
 	background-color: $sky;
 	border: 2px solid $rose;
 	color: $rose;
 	font-weight: lighter;
+}
+
+.levels {
+	width:75px;
 }
