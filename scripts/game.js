@@ -69,7 +69,7 @@ function endCondition(score) {
 	var over = document.createElement("button");
 	over.innerHTML = "Play again?";
 	gameDisplay.appendChild(end);
-	if (score < 5) {
+	if (score < 10) {
 		end.innerHTML = "<h1>You lose!</h1>";
 	} else {
 		end.innerHTML = "<h1>You win!</h1>";
